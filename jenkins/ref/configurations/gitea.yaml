@@ -1,0 +1,18 @@
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+        - usernamePassword:
+            description: "Global_GiteaToken"
+            id: "jenkins-gitea-token"
+            scope: GLOBAL
+            username: "service_jenkins_git"
+            password: "${readFile:${SECRET_FILE_PATH}/GITEA_TOKEN}"
+unclassified:
+  giteaServers:
+    servers:
+    - displayName: "Gitea"
+      manageHooks: true
+      serverUrl: "https://git.lab.proficom.de"
+      credentialsId: "jenkins-gitea-token"
+

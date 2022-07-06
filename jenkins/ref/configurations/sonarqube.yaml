@@ -1,0 +1,19 @@
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+        - string:
+            description: "Global_SonarToken"
+            id: "pc-sonar-token"
+            scope: GLOBAL
+            secret: "${readFile:${SECRET_FILE_PATH}/SONARQUBE_TOKEN}"
+unclassified:
+  sonarGlobalConfiguration:
+    buildWrapperEnabled: true
+    installations:
+    - credentialsId: "pc-sonar-token"
+      name: "pcSonar"
+      serverUrl: "https://sonarqube.lab.my-domain.de/"
+      triggers:
+        skipScmCause: false
+        skipUpstreamCause: false

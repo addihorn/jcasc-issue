@@ -1,0 +1,34 @@
+unclassified:
+  logFileFilterConfig:
+    enabledDefaultRegexp: true
+    enabledGlobally: true
+    regexpPairs:
+    - regexp: "(((P|p)assword)|((P|p)(W|w)))=\\S*"
+      replacement: "$1=******"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  gradle:
+    installations:
+    - name: "gradle"
+      properties:
+      - installSource:
+          installers:
+          - gradleInstaller:
+              id: "6.0"
+  maven:
+    installations:
+    - name: "maven"
+      properties:
+      - installSource:
+          installers:
+          - maven:
+              id: "3.6.2"
+  pipelineMaven:
+    triggerDownstreamUponResultAborted: false
+    triggerDownstreamUponResultFailure: false
+    triggerDownstreamUponResultNotBuilt: false
+    triggerDownstreamUponResultSuccess: true
+    triggerDownstreamUponResultUnstable: false

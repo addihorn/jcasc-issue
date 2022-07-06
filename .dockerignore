@@ -1,0 +1,9 @@
+.git/
+docs/
+manifests/
+src/
+testsuites/
+Jenkinsfile
+pipeline_config.groovy
+pom.xml
+README.md
