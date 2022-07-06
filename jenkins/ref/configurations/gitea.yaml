@@ -13,6 +13,6 @@ unclassified:
     servers:
     - displayName: "Gitea"
       manageHooks: true
-      serverUrl: "https://git.lab.proficom.de"
+      serverUrl: "https://git.lab.my-domain.de"
       credentialsId: "jenkins-gitea-token"
 
